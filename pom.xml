@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.tgl</groupId>
+    <artifactId>drools_sample</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <drool.version>5.6.0.Final</drool.version>
+    </properties>
+
+    <dependencies>
+        <!--kie api 构建kie虚拟文件系统，关联decisiontable和drl文件，很关键 -->
+        <dependency>
+            <groupId>org.kie</groupId>
+            <artifactId>kie-api</artifactId>
+            <version>${drool.version}</version>
+        </dependency>
+        <!-- 规则引擎核心包，里面包含了RETE引擎和LEAPS 引擎-->
+        <dependency>
+            <groupId>org.drools</groupId>
+            <artifactId>drools-core</artifactId>
+            <version>${drool.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.drools</groupId>
+            <artifactId>drools-compiler</artifactId>
+            <version>${drool.version}</version>
+        </dependency>
+        <!-- 决策表依赖-->
+        <dependency>
+            <groupId>org.drools</groupId>
+            <artifactId>drools-decisiontables</artifactId>
+            <version>${drool.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.drools</groupId>
+            <artifactId>drools-templates</artifactId>
+            <version>${drool.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

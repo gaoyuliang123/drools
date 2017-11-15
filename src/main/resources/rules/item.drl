@@ -1,0 +1,21 @@
+template header
+field
+lower
+upper
+codes
+
+package com.tgl.template;
+
+import com.tgl.template.Item;
+import com.tgl.template.ItemCode;
+
+dialect  "mvel"
+
+template "inRange"
+rule "is in range @{row.rowNumber}"
+    when
+        item($name : name, $v: @{field} >= @{lower} && <= @{upper}, $code: itemCode @{codes})
+    then
+        System.out.println("item" + $name + "@{field} in range" + $v + "itemCode" + $code);
+end
+end template
